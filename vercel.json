@@ -1,3 +1,22 @@
-git branch -M main
-git remote add origin https://github.com/siddhant-agrawal01/Nextjs-crud-app.git
-git push -u origin main
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "out"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/$1"
+      }
+    ],
+    "env": {
+      "DATABASE_URL": "@database-url"
+    }
+  }
+  
