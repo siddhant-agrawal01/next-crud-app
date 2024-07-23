@@ -11,5 +11,13 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "DATABASE_URL": "postgresql://testingdb_owner:avTFlIBy3d6k@ep-falling-salad-a5fxr2jb.us-east-2.aws.neon.tech/testingdb?sslmode=require"
+    },
+    "commands": {
+      "build": "prisma generate && next build"
+    }
+  }
 }
